@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="admin.css" />
+  <title>Admin</title>
+</head>
+<body>
+  <div class="top">
+    <div class="t">Admin Panel</div>
+    <div class="links">
+      <a href="/">Leaderboard</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <!-- Points -->
+    <section class="card">
+      <h2>Points</h2>
+      <p class="muted">Редагуй масив очок через кому: "25,18,15,..."</p>
+      <div class="row">
+        <input id="pointsInput" placeholder="25,18,15,12,10,8,6,4,2,1" />
+        <button id="savePointsBtn">Save</button>
+      </div>
+      <div id="pointsMsg" class="msg"></div>
+    </section>
+
+    <div class="grid">
+
+      <!-- Drivers -->
+      <section class="card">
+        <h2>Drivers</h2>
+        <div class="row">
+          <input id="driverName" placeholder="nickname" />
+          <button id="addDriverBtn">Add</button>
+        </div>
+        <div id="driversList" class="list"></div>
+      </section>
+
+      <!-- Teams -->
+      <section class="card">
+        <h2>Teams</h2>
+        <div class="row">
+          <input id="teamName" placeholder="team name" />
+          <button id="addTeamBtn">Add</button>
+        </div>
+        <div id="teamsList" class="list"></div>
+      </section>
+
+      <!-- Maps -->
+      <section class="card">
+        <h2>Maps</h2>
+        <div class="row">
+          <input id="mapName" placeholder="map name" />
+          <button id="addMapBtn">Add</button>
+        </div>
+        <div id="mapsList" class="list"></div>
+      </section>
+
+      <!-- Add/Edit Result -->
+      <section class="card">
+        <h2>Add / Edit Result</h2>
+        <p class="muted">Тут можна додати новий результат. Для редагування — кнопка Edit внизу.</p>
+
+        <div class="formgrid">
+          <label>
+            <span>Driver</span>
+            <select id="resDriver"></select>
+          </label>
+
+          <label>
+            <span>Team (optional)</span>
+            <select id="resTeam"></select>
+          </label>
+
+          <label>
+            <span>Map</span>
+            <select id="resMap"></select>
+          </label>
+
+          <label>
+            <span>Place</span>
+            <input id="resPlace" type="number" min="1" placeholder="1" />
+          </label>
+
+          <label>
+            <span>Time ms (optional)</span>
+            <input id="resTime" type="number" min="0" placeholder="95321" />
+          </label>
+        </div>
+
+        <div class="row">
+          <button id="addResultBtn">Add Result</button>
+          <button id="reloadAllBtn" class="ghost">Reload lists</button>
+        </div>
+
+        <div id="resultsMsg" class="msg"></div>
+      </section>
+
+    </div>
+
+    <!-- Results list -->
+    <section class="card">
+      <h2>Recent Results</h2>
+      <p class="muted">Останні 200 записів. Можеш видаляти або редагувати.</p>
+      <div id="resultsList" class="list"></div>
+    </section>
+
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

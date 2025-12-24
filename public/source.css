@@ -1,0 +1,268 @@
+/* source.css - стилі головного сайту */
+
+* { box-sizing: border-box; }
+
+:root{
+  --bg: rgb(4, 1, 7);
+  --panel: rgba(10, 9, 19, 0.966);
+  --muted: rgba(255,255,255,0.65);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: white;
+  font-family: Inter, system-ui, Arial;
+}
+
+/* Верхня панель */
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 14px 18px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+}
+
+.title{
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.right{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+
+.hint{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.adminLink{
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+}
+
+.adminLink:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+/* Layout двох колонок */
+.lists {
+  display: flex;
+  gap: 20px;
+  padding: 18px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-listbg {
+  background: var(--panel);
+  width: 1000px;
+  height: calc(100vh - 110px);
+  border-radius: 20px;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.racers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.racer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-repeat:no-repeat;
+  background-position: center; /* <— правильніше ніж center + right */
+  background-size:340px auto;
+
+  opacity:0.2;
+  pointer-events:none;
+
+  /* ✅ базовий стан для анімації */
+  transform: scale(1);
+  transform-origin: center right;
+
+  /* ✅ плавність */
+  transition: transform 280ms ease, opacity 280ms ease, filter 280ms ease;
+}
+
+.racer:hover::before{
+  transform: scale(1.10);  /* ✅ “розширяється” */
+  opacity: 0.9;
+  filter: saturate(1.05);
+}
+
+
+
+/* Картка гонщика */
+.racer {
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+
+  transform: translateY(0) scale(1);
+  transform-origin: center;
+
+
+  transition: transform 220ms ease, box-shadow 220ms ease;
+
+  z-index: 0;
+}
+
+.racer:hover{
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  z-index: 10; /* ✅ поверх сусідів */
+}
+
+.racer:first-child { border: 1px solid #ffd700;}
+.racer:nth-child(2){ border:1px solid #C0C0C0; } 
+.racer:nth-child(3){ border:1px solid #CD7F32; }
+
+.points{
+  font-weight: 900;
+  font-size: 18px;
+  transition: opacity 180ms ease, color 180ms ease;
+}
+
+.racer:hover .points{
+  opacity: 0; /* ✅ плавно зникає без стрибків */
+}
+
+
+
+
+.left{
+  display:flex;
+  flex-direction:column;
+  gap: 2px;
+}
+
+.name{
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.sub{
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.points{
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.details{
+  position: absolute;         /* ✅ критично */
+  top: calc(100% + 8px);
+  left: 12px;
+  right: 12px;
+  z-index: 999;               /* ✅ щоб було поверх */
+
+  background: rgba(0,0,0,0.88);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+
+  /* ✅ плавна поява */
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.details.details--show{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.details.details-floating{
+  position: fixed;   /* ✅ не залежить від overflow батьків */
+  left: 0;
+  top: 0;
+  right: auto;
+  width: 320px;      /* буде перезаписано JS-ом */
+  z-index: 9999;
+}
+
+
+.drow{
+  display:flex;
+  justify-content:space-between;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.drow:last-child{ border-bottom:none; }
+
+/* Команди справа */
+.team-listbg {
+  background: var(--panel);
+  width: 280px;
+  height: 360px;
+  border-radius: 20px;
+  overflow-y: auto;
+  padding: 16px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.teamTitle{
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 10px;
+  
+}
+
+.team-container{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  
+}
+
+.teamRow{
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#111;
+  
+}
+
+#by {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0.2;
+  font-size: 12px;
+}

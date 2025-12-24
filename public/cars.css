@@ -1,0 +1,410 @@
+/* sauber 1*/
+
+.racerSauber{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(0, 128, 43) 5px, rgb(153, 255, 150) 700px);
+}
+
+.racerSauber::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(1, 95, 32) 5px, rgb(11, 230, 29) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerSauber:hover::after{
+  opacity: 1;
+}
+
+.racerSauber::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/sauber.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerSauber > *{
+  position: relative;
+  z-index: 2;         
+}
+
+
+/* Ferrari2*/
+.racerFerrari{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(102, 1, 1) 5px, rgb(255, 150, 150) 700px);
+}
+
+.racerFerrari::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(128, 0, 0) 5px, rgb(230, 11, 11) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerFerrari:hover::after{
+  opacity: 1;
+}
+
+.racerFerrari::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/ferrari.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerFerrari > *{
+  position: relative;
+  z-index: 2;         
+}
+
+/* Mclaren3*/
+
+.racerMclaren{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(128, 98, 0) 5px, rgb(255, 213, 150) 700px);
+}
+
+.racerMclaren::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(107, 70, 0) 5px, rgb(230, 128, 11) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerMclaren:hover::after{
+  opacity: 1;
+}
+
+.racerMclaren::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/Mclaren.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerMclaren > *{
+  position: relative;
+  z-index: 2;         
+}
+
+/* Visa cash cap 4*/
+
+.racerRacingbulls{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(0, 98, 128) 5px, rgb(150, 225, 255) 700px);
+}
+
+.racerRacingbulls::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(1, 78, 102) 5px, rgb(11, 215, 230) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerRacingbulls:hover::after{
+  opacity: 1;
+}
+
+.racerRacingbulls::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/racingbulls.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerRacingbulls > *{
+  position: relative;
+  z-index: 2;         
+}
+
+/* Astom 5*/
+
+.racerAstonmartin{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(23, 97, 62) 5px, rgb(182, 255, 206) 700px);
+}
+
+.racerAstonmartin::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(19, 78, 50) 5px, rgb(120, 255, 181) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerAstonmartin:hover::after{
+  opacity: 1;
+}
+
+.racerAstonmartin::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/astonmartin.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerAstonmartin > *{
+  position: relative;
+  z-index: 2;         
+}
+
+/* Willians 6*/
+
+.racerWilliams{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(14, 47, 117) 5px,rgb(114, 152, 255) 700px);
+}
+
+.racerWilliams::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(12, 41, 104) 5px, rgb(55, 74, 248) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerWilliams:hover::after{
+  opacity: 1;
+}
+
+.racerWilliams::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/williams.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerWilliams > *{
+  position: relative;
+  z-index: 2;         
+}
+
+/* Red Bull 7*/
+
+.racerRedbull{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(47, 44, 44) 5px,rgb(160, 160, 160) 700px);
+}
+
+.racerRedbull::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(9, 10, 13) 5px,rgb(106, 106, 106) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerRedbull:hover::after{
+  opacity: 1;
+}
+
+.racerRedbull::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/redbull.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerRedbull    > *{
+  position: relative;
+  z-index: 2;         
+}
+
+/* Alpine 8*/
+
+.racerAlpine{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(179, 0, 119) 5px,rgb(255, 131, 218) 700px);
+}
+
+.racerAlpine::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(133, 1, 89) 5px,rgb(187, 59, 148) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerAlpine:hover::after{
+  opacity: 1;
+}
+
+.racerAlpine::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/alpine.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerAlpine    > *{
+  position: relative;
+  z-index: 2;         
+}
+
+
+/* Mercedes 9*/
+
+.racerMercedes{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(29, 138, 120) 5px,rgb(128, 255, 217) 700px);
+}
+
+.racerMercedes::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(23, 114, 99) 5px,rgb(68, 168, 138) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerMercedes:hover::after{
+  opacity: 1;
+}
+
+.racerMercedes::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/mercedes.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerMercedes    > *{
+  position: relative;
+  z-index: 2;         
+}
+
+/* Haas 10*/
+
+.racerHaas{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(122, 122, 122) 5px,rgb(214, 214, 214) 700px);
+}
+
+.racerHaas::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgb(99, 99, 99) 5px,rgb(141, 141, 141) 700px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events:none;
+  z-index: 0;       
+}
+
+.racerHaas:hover::after{
+  opacity: 1;
+}
+
+.racerHaas::before{
+  content:"";         
+  position:absolute;
+  inset:0;
+  background-image:url("/assets/cars/haas.webp");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 340px auto;
+  opacity: 0.1;       
+  pointer-events:none;
+  z-index: 1;           
+}
+
+.racerHaas    > *{
+  position: relative;
+  z-index: 2;         
+}

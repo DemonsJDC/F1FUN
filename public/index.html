@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="source.css" />
+  <link rel="stylesheet" href="cars.css" />
+  <title>Leaderboard</title>
+</head>
+<body>
+  <div class="topbar">
+    <div class="title">Leaderboard</div>
+
+    <div class="right">
+      <div id="pointsHint" class="hint">loading...</div>
+      <a class="adminLink" href="/admin/">Admin</a>
+    </div>
+  </div>
+
+  <div class="lists">
+    <div class="main-listbg">
+      <!-- Тут JS намалює список гонщиків -->
+      <div id="racers-container" class="racers-container"></div>
+    </div>
+
+    <div class="team-listbg">
+      <div class="teamTitle">Teams</div>
+
+      <!-- Тут JS намалює список команд -->
+      <div id="team-container" class="team-container"></div>
+    </div>
+  </div>
+
+  <div id="by">Design by Demons_JDC + AI | Fan-made tournament tool | Non-commercial | Not affiliated with any game/brand | All trademarks belong to their owners </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
