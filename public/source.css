@@ -130,6 +130,7 @@ body {
 
   transition: transform 220ms ease, box-shadow 220ms ease;
 
+
   z-index: 0;
 }
 
@@ -260,9 +261,86 @@ body {
 }
 
 #by {
-  position: fixed;
+
   bottom: 10px;
   left: 10px;
   opacity: 0.2;
   font-size: 12px;
 }
+
+
+@media (max-width:500px) {
+  .title {
+    font-size: 14px;
+  }
+
+  .hint {
+    font-size: 10px;
+  }
+
+      .lists {
+      display: flex;
+      gap: 20px;
+      padding: 18px;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+
+    }
+
+  .main-listbg {
+    background: var(--panel);
+    max-width: 280px;
+    height: calc(100vh - 110px);
+    border-radius: 20px;
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  .left{
+  display:flex;
+  flex-direction:column;
+  gap: 2px;
+}
+
+.racer:hover .left{
+  color: white;
+  -webkit-text-stroke: 4px black;
+  paint-order: stroke fill; 
+  transition: -webkit-text-stroke 500ms, color 500ms;
+}
+
+  #by {
+  bottom: 10px;
+  left: 10px;
+  opacity: 0.2;
+  font-size: 8px;
+}
+
+}
+
+/* @media (max-width:1000px) {
+
+    .main-listbg {
+    background: var(--panel);
+    width: 1000px;
+    height: calc(100vh - 110px);
+    border-radius: 20px;
+    overflow-y: auto;
+    padding: 16px;
+    position: relative;
+  }
+
+  .lists {
+      display: flex;
+      gap: 20px;
+      padding: 18px;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+      width: auto;
+
+    }
+
+
+} доробити пізніше */
